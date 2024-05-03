@@ -1,18 +1,18 @@
 import requests
 from twilio.rest import Client
 
-api_key = "808bda379c3f358d866ed5fbc998ae10"
+api_key = ""
 
-twilio_account_sid = "AC6a916389b78ca018a9adb995df46d0b1"
-twilio_auth_token = "a1b991364599966ff76d02100421a9de"
-verify_sid = "VAca0ddccc627c2790286225993d571109"
-twilio_phone_number = "+15734961771"
+twilio_account_sid = ""
+twilio_auth_token = ""
+verify_sid = ""
+twilio_phone_number = ""
 
 twilio_client = Client(twilio_account_sid, twilio_auth_token)
 
 parametres = {
-    "lat": 30.733315,
-    "lon": 76.779419,
+    "lat": 0,
+    "lon": 0,
     "appid": api_key,
     "exclude": "current,minutely,daily",
     "lang": "en"
@@ -34,7 +34,7 @@ if will_rain:
     message = twilio_client.messages.create(
         from_=twilio_phone_number,
         body="It's going to rain today.Remember to bring an ☔",
-        to="+919992394539"
+        to="your_number"
     )
     print(message.status)
 
