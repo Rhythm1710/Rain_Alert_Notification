@@ -37,25 +37,3 @@ if will_rain:
         to="your_number"
     )
     print(message.status)
-
-
-# import requests
-# api_key = "808bda379c3f358d866ed5fbc998ae10"
-
-# parametres = {
-#     "lat": 30.733315,
-#     "lon": 76.779419,
-#     "appid": api_key,
-#     "exclude":"current,minutely,daily",
-#     "lang":"en"
-# }
-
-# response = requests.get(url="https://api.openweathermap.org/data/3.0/onecall",params=parametres)
-# response.raise_for_status()
-# weather_data = response.json()["hourly"]
-# # print(weather_data[0]["weather"])
-
-# for i in  range(12):
-#     code = int(weather_data[i]["weather"][0])
-#     if code<700:
-#         print("Bring Umbrella")
